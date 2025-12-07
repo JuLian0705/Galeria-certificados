@@ -1,0 +1,39 @@
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  :root {
+    --item-w: 200px;
+    --item-h: 280px;
+    --gap: 20;
+  }
+
+  .wrap { width: 90vw; height: 55vh; }
+
+  .arrow { 
+    font-size: 48px;
+  }
+
+  #left { left: 1px; }   
+  #right { right: 1px; }
+
+  .title { font-size: 16px; bottom: -50px; }
+  .modal { width: 95vw; height: 90vh; }
+  .pdf-controls { font-size: 15px; }
+  .pdf-controls button { padding: 5px 10px; font-size: 15px; }
+}
+
+/* Pantallas medianas (≤ 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --item-w: 220px;
+    --item-h: 300px;
+    --gap: 24;
+  }
+
+  .wrap { width: 92vw; height: 60vh; }
+
+  .arrow { font-size: 50px; margin-top: 200px;}
+  #left { left: 1px; }
+  #right { right: 1px; }
+
+  .title { font-size: 17px; bottom: -55px; }
+}

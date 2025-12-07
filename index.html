@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Galeria de certificaciones</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="stylesheet" href="assets/main.css" />
+<link rel="stylesheet" href="assets/Queris.css" />
+<link rel="icon" href="assets/img/icono-certificado.png">
+</head>
+<body>
+<div class="white-overlay"></div>
+
+  <div class="container">
+    <div class="loader">
+      <span>H</span>
+      <span class="italic">O</span>
+      <span>L</span>
+      <span class="italic">A</span>
+    </div>
+  </div>
+<div class="wrap" id="wrap">
+  <div id="left" class="arrow">&#9664;</div>
+  <div id="right" class="arrow">&#9654;</div>
+  <div id="carousel" class="carousel">
+    <div class="item" data-pdf="assets/pdf/Bachiller academico.pdf"><img src="assets/img/Bachilleracademicopage-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Cómo resolver problemas y tomar decisiones.pdf"><img src="assets/img/Cómoresolverproblemasdecisiones_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Curso De excel Intermedio.pdf"><img src="assets/img/CursoDeexcelIntermedio_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Curso de power bi.pdf"><img src="assets/img/Cursodepowerbi_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/cursodec.pdf"><img src="assets/img/Curso de unitycconnet_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Habilidades de comunicacion Iberoamericana.pdf"><img src="assets/img/Habilidades_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Tecnologo en Analisis y desarrollo de software.pdf"><img src="assets/img/Tecnologo en Analisis y desarrollo de software_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Tecnico En programacion de software.pdf"><img src="assets/img/Tecnico En programacion de software_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Introduccion a el desarrollo Backend.pdf"><img src="assets/img/IntroducciondesarrolloBackend_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Visualizacion de datos para bi.pdf"><img src="assets/img/Visualizacion de datos para bi_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Introduccion a las matematicas.pdf"><img src="assets/img/Introducciona las matematicas_page-0001.jpg"></div>
+    <div class="item" data-pdf="assets/pdf/Microsoft Power Apps.pdf"><img src="assets/img/Microsoft Power Apps_page-0001.jpg"></div>
+  </div>
+  <div class="title">Haz clic en un certificado para abrir el PDF</div>
+</div>
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <div class="pdf-container">
+      <canvas id="pdfCanvas"></canvas>
+    </div>
+    <div class="pdf-controls">
+      <span id="pageNum">1</span> / <span id="pageCount">1</span>
+    </div>
+  </div>
+</div>
+</body>
+<script src="js/modal.js"></script>
+<script src="js/carga.js"></script>
+</html>
