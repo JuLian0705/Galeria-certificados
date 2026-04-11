@@ -228,6 +228,8 @@ body{
   animation: flip 2s infinite cubic-bezier(0.76, 0, 0.24, 1);
   transform-origin: 0 70%;
   transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
   margin: 0 2px;
 }
 
