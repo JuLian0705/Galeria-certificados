@@ -1,5 +1,9 @@
 :root{
-  --bg:#070707;
+  --bg: #0b0f1a;
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.5);
+  --text-main: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.05);
   --gap:28;
   --item-w:240px;
   --item-h:340px;
@@ -11,9 +15,9 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(180deg,#040404 0%, hsl(211, 100%, 80%) 100%);
-  font-family:system-ui, Arial;
-  color:#fff;
+  background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
   overflow:hidden;
 }
 
@@ -41,18 +45,20 @@ body{
   height: var(--item-h);
   border-radius: 10px;
   overflow: hidden;
-  background-image: url("img/imagenmarco.jpg");
+  background-color: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 18px 40px rgba(0,0,0,.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .item:hover {
-  transform: scale(1.08) translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 20, 82, 0.85);
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 20px 40px var(--accent-glow);
+  border-color: var(--accent);
 }
 
 .item img {
@@ -85,10 +91,12 @@ body{
   left:50%;
   transform:translateX(-50%);
   bottom:-60px;
-  font-size:18px;
-  opacity:0.9;
-  color: rgb(55, 0, 255);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--accent-glow);
 }
 
 .far{ opacity:0; pointer-events:none }
@@ -150,6 +158,9 @@ body{
 
 #pdfCanvas {
   background: #222;
+  max-width: 100%;
+  height: auto !important;
+  display: block;
 }
 
 .pdf-controls {
@@ -183,7 +194,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background:linear-gradient(180deg,#040404 0%, hsl(211, 100%, 80%) 100%);
+  background: var(--bg);
   z-index: 9998;
   display: flex;
   justify-content: center;
@@ -211,9 +222,10 @@ body{
 
 .loader span {
   font-size: 60px;
-  font-family: "franklin gothic medium", sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
   display: inline-block;
-  animation: flip 2.6s infinite linear;
+  animation: flip 2s infinite cubic-bezier(0.76, 0, 0.24, 1);
   transform-origin: 0 70%;
   transform-style: preserve-3d;
   margin: 0 2px;
@@ -221,25 +233,25 @@ body{
 
 .loader span.italic {
   font-style: italic;
-  animation: flip 2.6s infinite linear;
+  animation: flip 2s infinite cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .loader span:nth-child(even) {
-  color: rgb(113, 143, 214);
+  color: var(--accent);
 }
 
-.loader span:nth-child(1) { animation-delay: 0s; }
-.loader span:nth-child(2) { animation-delay: 0.3s; }
-.loader span:nth-child(3) { animation-delay: 0.6s; }
-.loader span:nth-child(4) { animation-delay: 0.9s; }
-.loader span:nth-child(5) { animation-delay: 1.2s; }
-.loader span:nth-child(6) { animation-delay: 1.5s; }
-.loader span:nth-child(7) { animation-delay: 1.8s; }
+.loader span:nth-child(1) { animation-delay: 0.1s; }
+.loader span:nth-child(2) { animation-delay: 0.2s; }
+.loader span:nth-child(3) { animation-delay: 0.3s; }
+.loader span:nth-child(4) { animation-delay: 0.4s; }
+.loader span:nth-child(5) { animation-delay: 0.5s; }
+.loader span:nth-child(6) { animation-delay: 0.6s; }
+.loader span:nth-child(7) { animation-delay: 0.7s; }
 
 @keyframes flip {
-  0% { transform: rotateZ(0deg); }
-  35% { transform: rotateZ(360deg); }
-  100% { transform: rotateZ(360deg); }
+  0% { transform: rotateX(0deg); opacity: 0.8; }
+  45% { transform: rotateX(360deg); opacity: 1; }
+  100% { transform: rotateX(360deg); opacity: 0.8; }
 }
 
 body.loaded .container,

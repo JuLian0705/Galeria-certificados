@@ -4,21 +4,31 @@
     --item-w: 200px;
     --item-h: 280px;
     --gap: 20;
+    --accent: #60a5fa;
   }
 
   .wrap { width: 90vw; height: 55vh; }
 
   .arrow { 
-    font-size: 48px;
+    font-size: 32px;
+    opacity: 0.8;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
   }
 
   #left { left: 1px; }   
   #right { right: 1px; }
 
   .title { font-size: 16px; bottom: -50px; }
-  .modal { width: 95vw; height: 90vh; }
-  .pdf-controls { font-size: 15px; }
-  .pdf-controls button { padding: 5px 10px; font-size: 15px; }
+  .modal { width: 98vw; height: 92vh; }
+  .pdf-container { padding: 5px; align-items: center; }
+  .pdf-controls { 
+    font-size: 14px; 
+    width: 90%; 
+    justify-content: center; 
+    gap: 8px;
+  }
+  .pdf-controls button { padding: 8px 12px; font-size: 14px; }
 }
 
 /* Pantallas medianas (≤ 1024px) */
@@ -31,7 +41,7 @@
 
   .wrap { width: 92vw; height: 60vh; }
 
-  .arrow { font-size: 50px; margin-top: 200px;}
+  .arrow { font-size: 40px; margin-top: 0;}
   #left { left: 1px; }
   #right { right: 1px; }
 

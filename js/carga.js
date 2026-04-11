@@ -1,10 +1,5 @@
 window.addEventListener('load', () => {
-  if (!sessionStorage.getItem('loaderShown')) {
   setTimeout(() => {
     document.body.classList.add('loaded');
-    sessionStorage.setItem('loaderShown', 'true');
-  }, 2600);
-  } else {
-    document.body.classList.add('loaded');
-  }
+  }, 3500); // Tiempo extendido a 3.5 segundos (entre 3 y 4 como solicitaste)
 });
